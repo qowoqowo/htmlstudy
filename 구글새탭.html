@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>새 탭</title>
+
+    <style>
+        div{
+            border: 1px solid black;
+        }
+
+        .header{
+            display: flex;
+            justify-content: end;
+            
+        }
+
+        .header > div{
+            display: flex;
+            align-items: center;
+        }
+
+        .header a{
+            margin-left: 5px;
+            margin-right: 5px;
+
+            color: black;
+            text-decoration: none;
+        }
+
+        .header a:hover{
+            text-decoration:underline
+        }
+
+        .header img{
+            width: 40px;
+            /* radius를 wudth의 절반만큼 주면 원형이 된다 */
+            border-radius: 20px;
+        }
+
+        .header img:hover{
+            /* 이미지에 효과 주기 */
+            filter: brightness(70%); /*  */
+        }
+    </style>
+</head>
+<body>
+        <div class="header">
+            <div>
+            <a href="">Gmail</a>
+            <a href="">이미지</a>
+            <a href="">
+                <img  src="https://cdn-icons-png.flaticon.com/512/6422/6422085.png" alt="">
+            </a>
+            <a href="">
+                <img  src="https://e7.pngegg.com/pngimages/290/80/png-clipart-hamburger-button-computer-icons-menu-menu-angle-food.png" alt="">
+            </a>
+        </div>
+    </div>
+        <div class="logo_box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png" alt="">
+        </div>
+    
+</body>
+</html>

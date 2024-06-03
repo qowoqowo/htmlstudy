@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            border: 1px solid black;
+        }
+
+        .container{
+            height: 100px;
+
+            /* container 내부 태그들을 정렬하고자 한다면 */
+            /* container 에 display: flax 부여  */
+            /* 내부 태그들의 display가 inline이든 block이든 inline으로 만든다 */
+            display: flex;
+
+            /* 수평방향 정렬 */
+            /* start, center, end , space-*  */
+            justify-content: space-between;
+
+            /* 수직방향 정렬 */
+            align-items: end;
+
+        }
+
+        .container > div{
+            height: 33%;
+            width: 60px;
+        }
+
+        .login-box{
+            height: 200px;
+            width: 200px;
+
+            /* flex는 기본적으로 내부 요소를 한줄로 표현해버림(가로 방향) */
+            display: flex;
+
+            /* 내부 요소를 세로 방향 한줄로 표현하도록 방향을 바꿈 */
+            flex-direction: column;
+
+            /* direction이 column인 경우 수직 정렬은 justify-content 이용 */
+            justify-content: space-evenly;
+
+            padding-left: 20px;
+            padding-right: 20px;
+
+        }
+
+        .navigation{
+            display: flex;
+            justify-content: space-between;
+            background-color: navy;
+        }
+
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+
+        .menu{
+            display: flex;
+            align-items: center;
+        }
+
+        .menu > a{
+            padding: 10px;
+        }
+
+        .back{
+            display: flex;
+            align-items: center;
+        }
+
+        button{
+            /* 테두리의 모서리를 둥글게 함 */
+            border-radius: 20px;
+           
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            border: 1px solid white;
+            color: white;
+
+            
+            /* transparent는 배경을 투명색으로 바꿈 */
+            background-color: transparent;
+
+        }
+
+        button:hover{
+            background-color: orange;
+            /* style의 변화가 있는 경우 변화시간을 부여하면 에니메이션처럼 동작 */
+            transition-duration: 0.5s; /* 1s 는 1초 동안 변화  */
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="">네이버</a>
+        <a href="">구글</a>
+        <a href="">로그인</a>
+    </div>
+    
+    <div class="container">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="login-box">
+        <input type="text">
+
+        <input type="password">
+
+        <button>로그인</button>
+    </div>
+
+    <div class="navigation">
+        <div class="logo">
+            <img width="100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Naver_Logotype.svg/2560px-Naver_Logotype.svg.png" alt="">
+        </div>
+
+        <div class="menu">
+            <a href="">교육과정</a>
+            <a href="">학원소개</a>
+            <a href="">커뮤니티</a>
+            <a href="">프로젝트</a>
+        </div>
+    
+        <div class="back">
+            <button>로그인</button>
+            <img width="40" src="https://i.namu.wiki/i/p_1IEyQ8rYenO9YgAFp_LHIAW46kn6DXT0VKmZ_jKNijvYth9DieYZuJX_E_H_4GkCER_sVKhMqSyQYoW94JKA.svg" alt="">
+        </div>
+
+    </div>
+
+
+</body>
+</html>
